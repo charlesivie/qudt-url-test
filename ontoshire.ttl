@@ -1,0 +1,18 @@
+# Ontoshire publishing manifest for QUDT — published from a URL.
+#
+# The repository holds no RDF at all. QUDT's own tree contains Maven templates
+# whose ontology IRI is still $$QUDT_VERSION$$ until release-time substitution;
+# the built artefact is served at qudt.org, versioned and content-negotiated.
+# This manifest names that address, and Ontoshire fetches it (ARCHITECTURE §13).
+
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+<> a dcat:Catalog ;
+    dcat:dataset <#qudt> .
+
+<#qudt> a dcat:Dataset ;
+    dcterms:title "QUDT — Quantities, Units, Dimensions and dataTypes" ;
+    dcterms:identifier <http://qudt.org/3.5.2/qudt-all> ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    dcat:distribution [ dcat:downloadURL <https://qudt.org/3.5.2/qudt-all> ] .
